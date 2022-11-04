@@ -18,7 +18,7 @@ class SmartComponentStates(object):
         oneNode.start_execution()
         time.sleep(2)
         oneNode.finish_execution()
-        if oneNode.state is 'executed':
+        if oneNode.state == 'executed':
             self.success = True
 
     def execute_positioning_action(self):
@@ -26,7 +26,7 @@ class SmartComponentStates(object):
         oneNode.start_execution()
         time.sleep(2)
         oneNode.finish_execution()
-        if oneNode.state is 'executed':
+        if oneNode.state == 'executed':
             self.success = True
 
     def execute_pickup_action(self):
@@ -34,7 +34,7 @@ class SmartComponentStates(object):
         oneNode.start_execution()
         time.sleep(2)
         oneNode.finish_execution()
-        if oneNode.state is 'executed':
+        if oneNode.state == 'executed':
             self.success = True
 
     def execute_assembly_action(self):
@@ -42,7 +42,7 @@ class SmartComponentStates(object):
         oneNode.start_execution()
         time.sleep(2)
         oneNode.finish_execution()
-        if oneNode.state is 'executed':
+        if oneNode.state == 'executed':
             self.success = True
 
     def is_execution_success(self):
