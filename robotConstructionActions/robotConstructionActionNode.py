@@ -6,10 +6,11 @@ from transitions import Machine
 
 class RobotConstructionActionNode(object):
     def __init__(self, node_name):
-        self.ts_finish = None
-        self.ts_start = None
         self.id = uuid.uuid4()
         self.name = node_name
+        self.success = False
+        self.ts_finish = None
+        self.ts_start = None
         self.states = [
             {'name': 'not working', 'on_exit': 'start_time'},
             {'name': 'working', 'on_exit': 'finish_time'},

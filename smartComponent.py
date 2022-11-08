@@ -2,7 +2,6 @@ import time
 
 from transitions import Machine
 import uuid
-import random
 from robotConstructionActions import robotConstructionActionNode as rca
 
 
@@ -16,7 +15,6 @@ class SmartComponentStates(object):
     def execute_moving_action(self):
         oneNode = rca.RobotConstructionActionNode('move_action')
         oneNode.start_execution()
-        time.sleep(2)
         oneNode.finish_execution()
         if oneNode.state == 'executed':
             self.success = True
@@ -24,7 +22,6 @@ class SmartComponentStates(object):
     def execute_positioning_action(self):
         oneNode = rca.RobotConstructionActionNode('positioning_action')
         oneNode.start_execution()
-        time.sleep(2)
         oneNode.finish_execution()
         if oneNode.state == 'executed':
             self.success = True
@@ -32,7 +29,6 @@ class SmartComponentStates(object):
     def execute_pickup_action(self):
         oneNode = rca.RobotConstructionActionNode('pickup_action')
         oneNode.start_execution()
-        time.sleep(2)
         oneNode.finish_execution()
         if oneNode.state == 'executed':
             self.success = True
@@ -40,7 +36,6 @@ class SmartComponentStates(object):
     def execute_assembly_action(self):
         oneNode = rca.RobotConstructionActionNode('assembly_action')
         oneNode.start_execution()
-        time.sleep(2)
         oneNode.finish_execution()
         if oneNode.state == 'executed':
             self.success = True
@@ -81,32 +76,39 @@ if __name__ == '__main__':
     ]
 
     smartComponent = SmartComponentStates(states_test, transitions_test)
-    while smartComponent.success is False:
-        smartComponent.start_work()
-    smartComponent.reset_success()
-    print('\n')
 
-    while smartComponent.success is False:
-        smartComponent.start_positioning_for_pickup()
-    smartComponent.reset_success()
-    print('\n')
+    while smartComponent.state != 'constructed':
+        print(smartComponent.state)
+        print('\n')
 
-    while smartComponent.success is False:
-        smartComponent.start_pickup()
-    smartComponent.reset_success()
-    print('\n')
+        while smartComponent.success is False:
+            smartComponent.start_work()
+        smartComponent.reset_success()
+        print('\n')
 
-    while smartComponent.success is False:
-        smartComponent.start_transfer()
-    smartComponent.reset_success()
-    print('\n')
+        while smartComponent.success is False:
+            smartComponent.start_positioning_for_pickup()
+        smartComponent.reset_success()
+        print('\n')
 
-    while smartComponent.success is False:
-        smartComponent.start_positioning_for_assembly()
-    smartComponent.reset_success()
-    print('\n')
+        while smartComponent.success is False:
+            smartComponent.start_pickup()
+        smartComponent.reset_success()
+        print('\n')
 
-    while smartComponent.success is False:
-        smartComponent.start_assembly()
-    smartComponent.reset_success()
-    print('\n')
+        while smartComponent.success is False:
+            smartComponent.start_transfer()
+        smartComponent.reset_success()
+        print('\n')
+
+        while smartComponent.success is False:
+            smartComponent.start_positioning_for_assembly()
+        smartComponent.reset_success()
+        print('\n')
+
+        while smartComponent.success is False:
+            smartComponent.start_assembly()
+        smartComponent.reset_success()
+        print('\n')
+
+        print(smartComponent.state)
