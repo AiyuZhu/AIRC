@@ -5,10 +5,10 @@ import rospy
 from gazebo_msgs.srv import GetModelState
 
 class target_pose_generator(object):
-    def __init__(self, comp_id):
+    def __init__(self, comp_id, node_name, pose_information):
         self.comp_id = comp_id
 
-    def move_to_component(self):
+    def move_to_object(self):
         # connect simulator to get component info
         sim_get = rospy.ServiceProxy('/gazebo/get_model_state', GetModelState)
         comp_info = sim_get(self.comp_id, "")
@@ -26,4 +26,4 @@ class target_pose_generator(object):
 
 if __name__ == '__main__':
     target_generator = target_pose_generator('IfcFooting_267VPu8ab9991QBA3MI1qr')
-    print(target_generator.move_to_component())
+    print(target_generator.move_to_object())
