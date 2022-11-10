@@ -1,0 +1,148 @@
+@prefix inst: <http://linkedbuildingdata.net/ifc/resources20210908_001852/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix bot:  <https://w3id.org/bot#> .
+@prefix beo:  <https://pi.pauwel.be/voc/buildingelement#> .
+@prefix mep:  <https://pi.pauwel.be/voc/distributionelement#> .
+@prefix props:  <https://w3id.org/props#> .
+@prefix dice: <https://w3id.org/digitalconstruction/Entities#> .
+
+
+inst: rdf:type <http://www.w3.org/2002/07/owl#Ontology> .
+
+inst:site_160
+	a bot:Site ;
+	rdfs:label "Default"^^xsd:string ;
+	rdfs:comment ""^^xsd:string ;
+	bot:hasGuid "90b511b9-b7c0-465c-8e11-4a4033650f22"^^xsd:string ;
+	props:hasCompressedGuid "2GjH6vjy16N8uHIa0pPGyY"^^xsd:string ;
+	bot:hasBuilding inst:building_137 ;
+	props:reference "Project Information"^^xsd:string ;
+	props:category "Project Information"^^xsd:string ;
+	props:clientName "Owner"^^xsd:string ;
+	props:projectAddress "Enter address here"^^xsd:string ;
+	props:projectIssueDate "Issue Date"^^xsd:string ;
+	props:projectName "Project Name"^^xsd:string ;
+	props:projectNumber "0001"^^xsd:string ;
+	props:projectStatus "Project Status"^^xsd:string .
+
+inst:building_137
+	a bot:Building ;
+	rdfs:label ""^^xsd:string ;
+	rdfs:comment ""^^xsd:string ;
+	bot:hasGuid "90b511b9-b7c0-465c-8e11-4a4033650f21"^^xsd:string ;
+	props:hasCompressedGuid "2GjH6vjy16N8uHIa0pPGyX"^^xsd:string ;
+	bot:hasStorey inst:storey_150 ;
+	bot:hasStorey inst:storey_156 ;
+	props:reference "Project Information"^^xsd:string ;
+	props:numberOfStoreys "2"^^xsd:double ;
+	props:isLandmarked ".U."^^xsd:double ;
+	props:reference "Project Information"^^xsd:string ;
+	props:aboveGround ".U."^^xsd:double ;
+	props:reference "Project Information"^^xsd:string ;
+	props:reference "Project Information"^^xsd:string ;
+	props:isExternal false ;
+	props:category "Project Information"^^xsd:string ;
+	props:clientName "Owner"^^xsd:string ;
+	props:projectAddress "Enter address here"^^xsd:string ;
+	props:projectIssueDate "Issue Date"^^xsd:string ;
+	props:projectName "Project Name"^^xsd:string ;
+	props:projectNumber "0001"^^xsd:string ;
+	props:projectStatus "Project Status"^^xsd:string .
+
+inst:storey_150
+	a bot:Storey ;
+	bot:hasGuid "90b511b9-b7c0-465c-8e11-4a40cc9af1e7"^^xsd:string ;
+	props:hasCompressedGuid "2GjH6vjy16N8uHIa3Ccl7d"^^xsd:string ;
+	rdfs:label "8th Floor"^^xsd:string ;
+	rdfs:comment ""^^xsd:string ;
+	bot:containsElement inst:footing_360459 ;
+    props:reference "8mm Head"^^xsd:string ;
+	props:aboveGround ".U."^^xsd:double ;
+	props:elevation "0."^^xsd:double ;
+	props:computationHeight "0."^^xsd:double ;
+	props:structural false ;
+	props:buildingStory true ;
+	props:name "8th Floor"^^xsd:string ;
+	props:category "Levels"^^xsd:string ;
+	props:family "Level: 8mm Head"^^xsd:string ;
+	props:familyandType "Level: 8mm Head"^^xsd:string ;
+	props:type "Level: 8mm Head"^^xsd:string ;
+	props:typeId "Level: 8mm Head"^^xsd:string ;
+	props:elevationBase "Project Base Point"^^xsd:string ;
+	props:typeName "8mm Head"^^xsd:string ;
+	props:category "Levels"^^xsd:string ;
+	props:familyName "Level"^^xsd:string ;
+	props:color "0"^^xsd:double ;
+	props:linePattern "Centre"^^xsd:string ;
+	props:lineWeight "1"^^xsd:string ;
+	props:symbol "M_Level Head - Circle: M_Level Head - Circle"^^xsd:string ;
+	props:symbolatEnd1Default false ;
+	props:symbolatEnd2Default true .
+
+inst:footing_360459 a bot:Element,
+        dice:ifc_element ;
+    bot:hasGuid "267VPU8AB9991QBA3MI1_A"^^xsd:string ;
+    dice:hasActivity inst:Activity_360459 ;
+    dice:hasLabel "1"^^xsd:string .
+
+inst:install a dice:Activity ;
+    bot:hasGuid "90b511b9-b7c0-465c-8e11-7781666r78"^^xsd:string ;
+    dice:hasEnd "2022-11-10T09:00:00"^^xsd:dateTime ;
+    dice:hasLabel "6"^^xsd:string ;
+    dice:hasStart "2022-11-10T08:00:00"^^xsd:dateTime ;
+    dice:isSubActivityOf inst:Activity_360459 .
+
+inst:move_to_compoent a dice:Activity ;
+    bot:hasGuid "90b511b9-b7c0-465c-8e11-4a4033666r78"^^xsd:string ;
+    dice:hasEnd "2022-11-10T09:00:00"^^xsd:dateTime ;
+    dice:hasLabel "1"^^xsd:string ;
+    dice:hasStart "2022-11-10T08:00:00"^^xsd:dateTime ;
+    dice:isSubActivityOf inst:Activity_360459 .
+
+inst:pick a dice:Activity ;
+    bot:hasGuid "90b511b9-b7c0-465c-8e11-4a4037896r78"^^xsd:string ;
+    dice:hasEnd "2022-11-10T09:00:00"^^xsd:dateTime ;
+    dice:hasLabel "3"^^xsd:string ;
+    dice:hasStart "2022-11-10T08:00:00"^^xsd:dateTime ;
+    dice:isSubActivityOf inst:Activity_360459 .
+
+inst:position_for_installing a dice:Activity ;
+    bot:hasGuid "90b511b9-b7c0-465c-8e11-10243666r78"^^xsd:string ;
+    dice:hasEnd "2022-11-10T09:00:00"^^xsd:dateTime ;
+    dice:hasLabel "5"^^xsd:string ;
+    dice:hasStart "2022-11-10T08:00:00"^^xsd:dateTime ;
+    dice:isSubActivityOf inst:Activity_360459 .
+
+inst:position_for_picking a dice:Activity ;
+    bot:hasGuid "90b511b9-b7c0-465c-8e11-455133666r78"^^xsd:string ;
+    dice:hasEnd "2022-11-10T09:00:00"^^xsd:dateTime ;
+    dice:hasLabel "2"^^xsd:string ;
+    dice:hasStart "2022-11-10T08:00:00"^^xsd:dateTime ;
+    dice:isSubActivityOf inst:Activity_360459 .
+
+inst:transfer a dice:Activity ;
+    bot:hasGuid "90b511b9-b7c0-465c-8e11-4a40336653218"^^xsd:string ;
+    dice:hasEnd "2022-11-10T09:00:00"^^xsd:dateTime ;
+    dice:hasLabel "4"^^xsd:string ;
+    dice:hasStart "2022-11-10T08:00:00"^^xsd:dateTime ;
+    dice:isSubActivityOf inst:Activity_360459 .
+
+inst:Activity_360459 a dice:Activity ;
+    dice:hasEnd "2022-11-10T09:00:00"^^xsd:dateTime ;
+    dice:hasStart "2022-11-10T08:00:00"^^xsd:dateTime ;
+    dice:hasState "constructed"^^xsd:string,
+        "need assembly"^^xsd:string,
+        "need construction"^^xsd:string,
+        "need pick up"^^xsd:string,
+        "need positioning for assembling"^^xsd:string,
+        "need positioning for picking up"^^xsd:string,
+        "need transfer to target"^^xsd:string ;
+    dice:hasSubActivity inst:install,
+        inst:move_to_compoent,
+        inst:pick,
+        inst:position_for_installing,
+        inst:position_for_picking,
+        inst:transfer ;
+    dice:isSubActivityOf inst:footing_360459 .

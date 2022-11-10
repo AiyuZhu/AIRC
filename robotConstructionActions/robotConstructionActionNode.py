@@ -59,11 +59,11 @@ class RobotConstructionActionNode(object):
         self.activities = activities
         if robots is None:
             self.robots = {'move_to_component': 'mobile_base',
-                           'positioning_for_pickup': 'manipulator',
-                           'pickup': 'gripper',
+                           'position_for_picking': 'manipulator',
+                           'pick': 'gripper',
                            'transfer': 'mobile_base',
-                           'positioning_for_assembly': 'manipulator',
-                           'assembly': 'gripper'}
+                           'position_for_installing': 'manipulator',
+                           'install': 'gripper'}
         else:
             self.robots = robots
 

@@ -61,11 +61,11 @@ if __name__ == '__main__':
           {'name': 'need assembly'},
           {'name': 'constructed'}],
          {'move_to_component': [1, 2, 3],
-          'positioning_for_pickup': [2, 3, 4],
-          'pickup': [3, 4, 5],
+          'position_for_picking': [2, 3, 4],
+          'pick': [3, 4, 5],
           'transfer': [4, 5, 6],
-          'positioning_for_assembly': [5, 6, 7],
-          'assembly': [7, 8, 9]}],
+          'position_for_installing': [5, 6, 7],
+          'install': [7, 8, 9]}],
         ['23456',
          [{'name': 'need construction'},
           {'name': 'need positioning for picking up'},
@@ -75,11 +75,11 @@ if __name__ == '__main__':
           {'name': 'need assembly'},
           {'name': 'constructed'}],
          {'move_to_component': [1.232, 2.232, 3.432],
-          'positioning_for_pickup': [2.342, 3.342, 4.342],
-          'pickup': [3.4324, 4.342, 5.34234],
+          'position_for_picking': [2.342, 3.342, 4.342],
+          'pick': [3.4324, 4.342, 5.34234],
           'transfer': [4.432, 5.342, 6.4324],
-          'positioning_for_assembly': [5.432, 6.432, 7.3423],
-          'assembly': [7.654, 8.4323, 9.3423]}
+          'position_for_installing': [5.432, 6.432, 7.3423],
+          'install': [7.654, 8.4323, 9.3423]}
          ]
     ]
 
