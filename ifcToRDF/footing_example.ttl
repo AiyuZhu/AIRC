@@ -89,41 +89,33 @@ inst:footing_360459 a bot:Element,
 
 inst:install a dice:Activity ;
     bot:hasGuid "90b511b9-b7c0-465c-8e11-7781666r78"^^xsd:string ;
+    dice:hasState "need assembly"^^xsd:string;
     dice:hasEnd "2022-11-10T09:00:00"^^xsd:dateTime ;
     dice:hasLabel "6"^^xsd:string ;
     dice:hasStart "2022-11-10T08:00:00"^^xsd:dateTime ;
     dice:isSubActivityOf inst:Activity_360459 .
 
-inst:move_to_compoent a dice:Activity ;
-    bot:hasGuid "90b511b9-b7c0-465c-8e11-4a4033666r78"^^xsd:string ;
-    dice:hasEnd "2022-11-10T09:00:00"^^xsd:dateTime ;
-    dice:hasLabel "1"^^xsd:string ;
-    dice:hasStart "2022-11-10T08:00:00"^^xsd:dateTime ;
-    dice:isSubActivityOf inst:Activity_360459 .
-
 inst:pick a dice:Activity ;
     bot:hasGuid "90b511b9-b7c0-465c-8e11-4a4037896r78"^^xsd:string ;
+    dice:hasState "need pick up"^^xsd:string;
     dice:hasEnd "2022-11-10T09:00:00"^^xsd:dateTime ;
     dice:hasLabel "3"^^xsd:string ;
     dice:hasStart "2022-11-10T08:00:00"^^xsd:dateTime ;
     dice:isSubActivityOf inst:Activity_360459 .
 
-inst:position_for_installing a dice:Activity ;
+inst:position a dice:Activity ;
     bot:hasGuid "90b511b9-b7c0-465c-8e11-10243666r78"^^xsd:string ;
+    dice:hasState
+        "need positioning for assembling"^^xsd:string,
+        "need positioning for picking up"^^xsd:string;
     dice:hasEnd "2022-11-10T09:00:00"^^xsd:dateTime ;
     dice:hasLabel "5"^^xsd:string ;
     dice:hasStart "2022-11-10T08:00:00"^^xsd:dateTime ;
     dice:isSubActivityOf inst:Activity_360459 .
 
-inst:position_for_picking a dice:Activity ;
-    bot:hasGuid "90b511b9-b7c0-465c-8e11-455133666r78"^^xsd:string ;
-    dice:hasEnd "2022-11-10T09:00:00"^^xsd:dateTime ;
-    dice:hasLabel "2"^^xsd:string ;
-    dice:hasStart "2022-11-10T08:00:00"^^xsd:dateTime ;
-    dice:isSubActivityOf inst:Activity_360459 .
-
 inst:transfer a dice:Activity ;
     bot:hasGuid "90b511b9-b7c0-465c-8e11-4a40336653218"^^xsd:string ;
+    dice:hasState "need transfer to target"^^xsd:string ;
     dice:hasEnd "2022-11-10T09:00:00"^^xsd:dateTime ;
     dice:hasLabel "4"^^xsd:string ;
     dice:hasStart "2022-11-10T08:00:00"^^xsd:dateTime ;
@@ -140,7 +132,7 @@ inst:Activity_360459 a dice:Activity ;
         "need positioning for picking up"^^xsd:string,
         "need transfer to target"^^xsd:string ;
     dice:hasSubActivity inst:install,
-        inst:move_to_compoent,
+        inst:move_to_component,
         inst:pick,
         inst:position_for_installing,
         inst:position_for_picking,
