@@ -132,9 +132,8 @@ inst:Activity_360459 a dice:Activity ;
         "need positioning for picking up"^^xsd:string,
         "need transfer to target"^^xsd:string ;
     dice:hasSubActivity inst:install,
-        inst:move_to_component,
+        inst:install,
         inst:pick,
-        inst:position_for_installing,
-        inst:position_for_picking,
+        inst:position,
         inst:transfer ;
     dice:isSubActivityOf inst:footing_360459 .

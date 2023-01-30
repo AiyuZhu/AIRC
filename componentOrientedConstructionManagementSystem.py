@@ -49,10 +49,11 @@ class ComponentOrientedConstructionManagementSystem(object):
 
 
 if __name__ == '__main__':
-    component_for_construction = {'12345': 'need construction', '23456': 'need construction'}
+    component_for_construction = {'0GuWquMoz3mxsQa9wOhOwi': 'need construction', '23456': 'need construction', '543453': 'need '
+                                                                                                        'construction'}
 
     comp_activities = [
-        ['12345',
+        ['0GuWquMoz3mxsQa9wOhOwi',
          [{'name': 'need construction'},
           {'name': 'need positioning for picking up'},
           {'name': 'need pick up'},
@@ -60,12 +61,12 @@ if __name__ == '__main__':
           {'name': 'need positioning for assembling'},
           {'name': 'need assembly'},
           {'name': 'constructed'}],
-         {'move_to_component': [1, 2, 3],
-          'position_for_picking': [2, 3, 4],
-          'pick': [3, 4, 5],
-          'transfer': [4, 5, 6],
-          'position_for_installing': [5, 6, 7],
-          'install': [7, 8, 9]}],
+         {'move_to_component': [5, 5, 0],
+          'position_for_picking': [5, 5.45, 0.85],
+          'pick': [5, 5.55, 0.85],
+          'transfer': [2, 2.5, 0],
+          'position_for_installing': [2, 2.55, 0.65],
+          'install': [2, 2.55, 0.35]}],
         ['23456',
          [{'name': 'need construction'},
           {'name': 'need positioning for picking up'},
@@ -80,7 +81,21 @@ if __name__ == '__main__':
           'transfer': [4.432, 5.342, 6.4324],
           'position_for_installing': [5.432, 6.432, 7.3423],
           'install': [7.654, 8.4323, 9.3423]}
-         ]
+         ],
+        ['543453',
+         [{'name': 'need construction'},
+          {'name': 'need positioning for picking up'},
+          {'name': 'need pick up'},
+          {'name': 'need transfer to target'},
+          {'name': 'need positioning for assembling'},
+          {'name': 'need assembly'},
+          {'name': 'constructed'}],
+         {'move_to_component': [1, 2, 3],
+          'position_for_picking': [2, 3, 4],
+          'pick': [3, 4, 5],
+          'transfer': [4, 5, 6],
+          'position_for_installing': [5, 6, 7],
+          'install': [7, 8, 9]}],
     ]
 
     construction_1 = ComponentOrientedConstructionManagementSystem(component_for_construction)
