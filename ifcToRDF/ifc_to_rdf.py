@@ -43,7 +43,7 @@ g.add((INST.INST_1, DICE.hasSubINST, INST.position_for_installing))
 g.add((INST.INST_1, DICE.hasSubINST, INST.install))
 
 
-g.add((INST.move_to_compoent, BOT.hasGuid, Literal("90b511b9-b7c0-465c-8e11-4a4033666r78", datatype=XSD['string'])))
+# g.add((INST.move_to_compoent, BOT.hasGuid, Literal("90b511b9-b7c0-465c-8e11-4a4033666r78", datatype=XSD['string'])))
 g.add((INST.move_to_compoent, DICE.hasLabel, Literal("1", datatype=XSD['string'])))
 g.add((INST.move_to_compoent, RDF.type, DICE.INST))
 g.add((INST.move_to_compoent, DICE.isSubINSTOf, INST.INST_1))
@@ -51,7 +51,7 @@ g.add((INST.move_to_compoent, DICE.hasStart, Literal('2022-11-10T08:00:00', data
 g.add((INST.move_to_compoent, DICE.hasEnd, Literal("2022-11-10T09:00:00", datatype=XSD['dateTime'])))
 
 
-g.add((INST.position_for_picking, BOT.hasGuid, Literal("90b511b9-b7c0-465c-8e11-455133666r78", datatype=XSD['string'])))
+# g.add((INST.position_for_picking, BOT.hasGuid, Literal("90b511b9-b7c0-465c-8e11-455133666r78", datatype=XSD['string'])))
 g.add((INST.position_for_picking, DICE.hasLabel, Literal("2", datatype=XSD['string'])))
 g.add((INST.position_for_picking, RDF.type, DICE.INST))
 g.add((INST.position_for_picking, DICE.isSubINSTOf, INST.INST_1))
@@ -59,7 +59,7 @@ g.add((INST.position_for_picking, DICE.hasStart, Literal('2022-11-10T08:00:00', 
 g.add((INST.position_for_picking, DICE.hasEnd, Literal("2022-11-10T09:00:00", datatype=XSD['dateTime'])))
 
 
-g.add((INST.pick, BOT.hasGuid, Literal("90b511b9-b7c0-465c-8e11-4a4037896r78", datatype=XSD['string'])))
+# g.add((INST.pick, BOT.hasGuid, Literal("90b511b9-b7c0-465c-8e11-4a4037896r78", datatype=XSD['string'])))
 g.add((INST.pick, DICE.hasLabel, Literal("3", datatype=XSD['string'])))
 g.add((INST.pick, RDF.type, DICE.INST))
 g.add((INST.pick, DICE.isSubINSTOf, INST.INST_1))
@@ -67,7 +67,7 @@ g.add((INST.pick, DICE.hasStart, Literal('2022-11-10T08:00:00', datatype=XSD['da
 g.add((INST.pick, DICE.hasEnd, Literal("2022-11-10T09:00:00", datatype=XSD['dateTime'])))
 
 
-g.add((INST.transfer, BOT.hasGuid, Literal("90b511b9-b7c0-465c-8e11-4a40336653218", datatype=XSD['string'])))
+# g.add((INST.transfer, BOT.hasGuid, Literal("90b511b9-b7c0-465c-8e11-4a40336653218", datatype=XSD['string'])))
 g.add((INST.transfer, DICE.hasLabel, Literal("4", datatype=XSD['string'])))
 g.add((INST.transfer, RDF.type, DICE.INST))
 g.add((INST.transfer, DICE.isSubINSTOf, INST.INST_1))
@@ -75,7 +75,7 @@ g.add((INST.transfer, DICE.hasStart, Literal('2022-11-10T08:00:00', datatype=XSD
 g.add((INST.transfer, DICE.hasEnd, Literal("2022-11-10T09:00:00", datatype=XSD['dateTime'])))
 
 
-g.add((INST.position_for_installing, BOT.hasGuid, Literal("90b511b9-b7c0-465c-8e11-10243666r78", datatype=XSD['string'])))
+# g.add((INST.position_for_installing, BOT.hasGuid, Literal("90b511b9-b7c0-465c-8e11-10243666r78", datatype=XSD['string'])))
 g.add((INST.position_for_installing, DICE.hasLabel, Literal("5", datatype=XSD['string'])))
 g.add((INST.position_for_installing, RDF.type, DICE.INST))
 g.add((INST.position_for_installing, DICE.isSubINSTOf, INST.INST_1))
@@ -83,7 +83,7 @@ g.add((INST.position_for_installing, DICE.hasStart, Literal('2022-11-10T08:00:00
 g.add((INST.position_for_installing, DICE.hasEnd, Literal("2022-11-10T09:00:00", datatype=XSD['dateTime'])))
 
 
-g.add((INST.install, BOT.hasGuid, Literal("90b511b9-b7c0-465c-8e11-7781666r78", datatype=XSD['string'])))
+# g.add((INST.install, BOT.hasGuid, Literal("90b511b9-b7c0-465c-8e11-7781666r78", datatype=XSD['string'])))
 g.add((INST.install, DICE.hasLabel, Literal("6", datatype=XSD['string'])))
 g.add((INST.install, RDF.type, DICE.INST))
 g.add((INST.install, DICE.isSubINSTOf, INST.INST_1))
